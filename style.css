@@ -1,0 +1,923 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    font-weight: 300;
+    background-color: #000;
+}
+
+.loginContainer{
+    background:url(background/1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 98vh;
+    overflow: hidden;
+}
+
+.loginContainer::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0, 0, 0, 0.233));
+    position: absolute;
+    bottom: 0;
+}
+
+.loginContainer p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.loginContainer p a{
+    text-decoration: none;
+    color: #ffb600;
+}
+
+.login-form img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: -20px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form{
+    width: 330px;
+    height: 480px;
+    padding: 20px 35px 35px 35px;
+    margin: 70px auto;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.671);
+    border: 2px solid #ffb600;
+    color: #fff;
+    z-index: 1;
+}
+
+.register-form{
+    width: 60%;
+    padding: 20px 35px 35px 35px;
+    margin: 70px auto;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.671);
+    border: 2px solid #ffb600;
+    color: #fff;
+    z-index: 1;
+}
+
+.fields{
+    width: 100%;
+    padding: 20px 5px 10px 5px;
+}
+
+.fields input{
+    border: none;
+    outline: none;
+    font-weight: bold;
+    width: 240px;
+    background: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 15px 10px 10px 5px;
+    text-align: center;
+}
+
+.fields-register{
+    width: 100%;
+    padding: 20px 0px;
+    /* background-color: #fff; */
+    position: relative;
+    margin: 0 auto;
+    margin-top: -20px;
+    text-align: center;
+    color: #fff;
+}
+
+.fields-register input[type="text"],input[type="date"], textarea{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: bold;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.089);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 6px 10px 5px 5px;
+    text-align: center;
+    display: block;
+}
+
+
+.fields-register input[type="radio"]{
+    margin: 10px;
+}
+
+#username, #password{
+    display: block;
+    border-bottom: 1px solid #ffb600;
+    margin: 20px auto;
+
+}
+
+.login-button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: "Poppins";
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    background: radial-gradient(#f8c649,#ffc738,#ffc022,#ffb600);
+}
+
+.login-button:hover{
+    background:radial-gradient(#af8416,#ca9716,#cc9201,#db9e02);
+    color: #fff;
+}
+
+.login-button:active{
+    background:radial-gradient(#af8416,#ca9716,#cc9201,#db9e02);
+    color: #fff;
+}
+
+
+.jumbotron{
+    /* background-image: url(background/joker.jpg); */
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    letter-spacing: 3px;
+    height: 700px;   
+    text-align: center;
+    transition: ease-in 1s;
+    margin-top: -25px;
+}
+
+.jumbotron::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0, 0, 0, 0.233));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .mainText{
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    top: 43%;
+}
+
+.text{
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.text span, p span{
+    font-weight: bold;
+}
+
+.kuning{
+    color: #ffb600;
+}
+
+@keyframes animasi{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.mainText{
+    opacity: 0;
+    animation: 3s animasi forwards;
+    animation-delay: 0.7s;
+}
+
+.mainText p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+}
+
+
+.mainText .jumbotron-btn a{
+    text-decoration: none;
+    color: #000;
+    background-image: linear-gradient(to top, rgb(255, 166, 0), rgb(255, 217, 0));
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.mainText .jumbotron-btn a:hover{
+    background:  rgb(255, 174, 0);
+    font-weight: bold;
+    text-shadow: none;
+    color: #fff;
+}
+
+nav{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 999;
+    margin: 0;
+}
+
+nav .webTitle{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    margin: 5px 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 500;
+}
+
+nav ul li .nav-link:hover{
+    color: #ffb600; 
+    /* content: "";
+    display: block;
+    border-bottom: 3px solid #ffb600;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 3px;
+    margin-bottom: -3px;
+    border-radius: 2px; */
+}
+
+nav ul li .login:hover{
+    background:  rgb(255, 174, 0);
+    color: #fff;
+}
+
+nav .login{
+    color: #000;
+    background-image: linear-gradient(to top, rgb(255, 166, 0), rgb(255, 217, 0));
+    padding: 3px 15px;
+    border-radius: 20px;
+    text-shadow: none;
+    font-weight: 800;
+}
+
+.scrolling-active{
+    background-color: rgba(0, 0, 0, 0.712);
+    transition: 0.5s;
+}
+
+/* Hamburger Menu */
+.menu{
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu span:nth-child(2){
+    transform-origin:0 0;
+}
+
+.menu span:nth-child(4){
+    transform-origin:0 100%;
+}
+
+
+.menu input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-5px, -5px);
+    background-color: rgb(255, 70, 70);
+}
+
+.menu input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(0px, 0);
+    background-color: rgb(255, 70, 70);
+}
+
+.menu input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    opacity: 0;
+}
+
+.aboutus{
+    /* background-color: #ffb600; */
+    width: 75%;
+    margin: 100px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.aboutus h1.webTitle{
+    margin-top: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.aboutus p{
+    font-size: 20px;
+}
+
+.movieText{
+    background-color: #ffb600;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: -30px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    height: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+.showmore{
+    background-color: #ffb600;
+    width: 130px;
+    text-align: center;
+    padding: 8px;
+    position: relative;
+    margin-left: 75%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.showmore a{
+    text-decoration: none;
+    color: black;
+}
+
+.showmore a:hover{
+    color: #fff;
+}
+
+.Movies{
+    position: relative;
+    margin-top: 80px;
+}
+
+.moviesText{
+    color: #ffb600;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffb600;
+    height: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+.nowPlayingMovies{
+    margin-bottom: 100px;
+}
+
+.comingSoonMovies{
+    position: relative;
+    /* background-color: #fff; */
+    width: 100%;
+}
+
+.cinemaslogo{
+    width: 80%;
+    position: relative;
+    margin: 10px auto;
+    margin-top: 30px;
+}
+
+.cinemaslogo img{
+    margin: 5px;
+}
+
+.dh1 { width:8.33%;}
+.dh2 { width:16.66%;}
+.dh3 { width:24.99%;}
+.dh4 { width:33.33%;}
+.dh5 { width:41.66%;}
+.dh6 { width:49.99%;}
+.dh7 { width:58.33%;}
+.dh8 { width:66.66%;}
+.dh9 { width:74.99%;}
+.dh10 { width:83.33%;}
+.dh11 { width:91.66%;}
+.dh12 { width:99.99%;}
+
+.dh1, .dh2, .dh3, .dh4, .dh5, .dh6, .dh7, .dh8, .dh9, .dh10, .dh11, .dh12{
+    position: relative;
+    display: inline-block;
+}
+
+@media screen and (max-width:720px){
+    .dh1, .dh2, .dh3, .dh4, .dh5, .dh6, .dh7, .dh8, .dh9, .dh10, .dh11, .dh12{
+        width: 100%;
+        margin-bottom: -1em;
+    }
+}
+
+
+.card{
+    margin: 17px;
+    min-height: 230px;
+    border: thin;
+    box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    padding-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    /* background-color: #f3f3; */
+}
+
+.kepalacard{
+    padding: 10px;
+    position: relative;
+    margin-top:10px;
+    background-color: #000;
+    color: #ffb600;
+    font-family: "Century Gothic";
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}   
+
+.isicard{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    min-height: 185px;
+    font-size: 15px;
+    font-family: "Century Gothic";
+}
+
+
+.isicard b , big{
+    color: #ffb600;
+}
+
+
+.movieDetail{
+    margin-top: 50px;
+}
+
+.pilihCinema{
+    margin-top: 10px;
+    height: 40px;
+    background-color: #000;
+    font-family: "Poppins";
+    font-size: 18px;
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+    outline: none;
+    border: 1px solid #ffb600;
+    border-radius: 5px;
+}
+
+
+.judulPoster{
+    color: #ffb600;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.kakicard{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffb600;
+    text-align: center;
+    min-height: 50px;
+}
+
+.grid{
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.footer{
+    background-color: #ffb600;
+    padding: 5px;
+    height: 30px;
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+}
+
+.poster{
+    position: relative;
+    width: 75%;
+    height: 400px;
+    margin: 10px 12%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #000;
+    animation: 3s animasi forwards;
+}
+
+
+
+.poster:hover{
+    transform: scale(1.02);
+    transition: .5s;
+    border: 2px solid #ffb600;
+}
+
+.posterdetail{
+    width: 30%;
+    position: relative;
+    float: left;
+    margin: 0 25px;
+    z-index: 1;
+}
+
+.posterticket{
+    width: 30%;
+    position: relative;
+    float: left;
+    margin: 0 25px;
+    z-index: 1;
+}
+
+/* .effect2{
+    background-color: #fff;
+} */
+
+.movieTrailer{
+    position: relative;
+    margin: 20px auto;
+    width: 70%;
+    height: 550px;
+}
+
+.movieTrailer iframe{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.detail{
+    position: relative;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+    /* background-color: red; */
+}
+
+.tayang{
+    position: relative;
+    margin-left: 32%;
+    width: 68%; 
+    margin-top: 10px;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.jamtayang{
+    margin: 5px;
+}
+
+.tayang .btn-add{
+    background-color: #fff;
+}
+
+.tayang .btn-add:hover{
+    background-color: #ffb600;
+}
+
+
+
+.transaksi {
+    border: 2px solid #ffb600;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.buktitransaksi{
+    background-color: #ffb600;
+    border: 2px solid #ffb600;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.buktitransaksi .detailtransaksi{
+    color: black;
+}
+
+.buktitransaksi .detailtransaksi b, .buktitransaksi .detailtransaksi big{
+    color: black;
+}
+
+.detailtransaksi{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.ticket{
+    border: 2px solid #ffb600;
+}
+
+
+.detailticket{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.btn{
+    padding: 6px 9px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 650;
+    width: auto;
+    margin-top: -100px;
+    border: 1px solid #000;
+}
+
+.btn-add{
+    color: #000;
+    background-color: #ffb600;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.btn-add:hover{
+    color: #fff;
+}
+
+@media screen and (max-width : 1024px){
+    .poster{
+        height: 300px;
+    }
+    .tayang{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width : 768px){
+    .posterticket{
+        float: left;
+        margin-left: 30%;
+        margin-bottom: 30px;
+        width: 40%;
+    }
+    .poster{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width : 720px){
+    .poster{
+        height: 100%;
+    }
+    .movieText{
+        font-size: 23px;
+        padding: 10px;
+    }
+    .moviesText{
+        font-size: 23px;
+        padding: 10px;
+    }
+}
+
+
+/* ukuran mobile */
+@media screen and (max-width : 576px){
+    /* Navbar responsive */
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        flex-direction:column;
+        background-color: black;
+        justify-content: space-evenly;
+        height: 100vh;
+        align-items: center;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        opacity: .8;
+        transform: translateX(0);
+    }
+
+    nav ul li{
+        margin: -150px;
+        padding: 40px;
+    }
+
+    .nav-link:hover{
+        color: #ffb600;
+    }
+    .menu{
+        display: flex;
+    }
+
+    .mainText .text{
+        font-size: 25px;
+    }
+
+    .mainText p{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .mainText .jumbotron-btn a{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    .showmore{
+        margin-top: 3px;
+        margin-left: 60%;
+        padding: 3px;
+    }
+
+    .movieText, .moviesText{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .posterticket{
+        float: left;
+        margin-left: 30%;
+        margin-bottom: 30px;
+        width: 40%;
+    }
+    .poster{
+        height: 100%;
+    }
+
+    .login-form{
+        width: 90%;
+    }
+    .register-form{
+        width: 90%;
+    }
+}
+
+
+.ticketing-row {
+    font-size: 12px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: 35px;
+    color: #000;
+    font-weight: bold;
+}
+  
+  .ticketing-col {
+    flex-grow: 1;
+    background-color: #a7ef8a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    flex-basis: 0;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  .available:hover{
+      background-color: #ffb600;
+  }
+  
+  .ticketing-col input {
+    display: inline-block;
+    width: 100%;
+    color: #ffb600;
+    cursor: pointer
+  }
+
+  
+  .reserved {
+    background: #f71111;
+    color: #fff;
+  }
+  
+  .screen {
+    text-align: center;
+    padding: 0.5rem 0;
+    background: #fff;
+    border-radius: none;
+  }
+
+  .ticket{
+      position: relative;
+      margin-top: 50px;
+      text-align: center;
+      font-size: 12px;
+  }
+
+  .totalharga{
+      width: 30%;
+      position: relative;
+      margin: 10px auto;
+      text-align: center;
+      font-size: 20px;
+      
+  }
+
+
+
+
+
